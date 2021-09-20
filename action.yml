@@ -10,6 +10,6 @@ inputs:
 runs:
   using: "composite"
   steps:
-    -run: |
-      pip install grumpy_checks==${{ inputs.grumpy-version }}
-    shell: bash
+    - run: |
+        pip install grumpy_checks==${{ inputs.grumpy-version }}
+      shell: bash
