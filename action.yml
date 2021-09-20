@@ -13,3 +13,7 @@ runs:
     - run: |
         pip install grumpy_checks==${{ inputs.grumpy-version }}
       shell: bash
+    - uses: actions/upload-artifact@v2
+      with:
+        name: grumpy-report
+        path: grumpy_report
