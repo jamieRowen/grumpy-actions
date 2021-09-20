@@ -1,5 +1,15 @@
 name: "Grumpy"
+author: "@jamieRowen"
 description: "Run grumpy checks against your source code"
+inputs:
+  grumpy-version:
+    description: "The version of grumpy_checks to install"
+    required: true
+    default: "0.1.4"
+
 runs:
-  using: "docker"
-  image: Dockerfile
+  using: "composite"
+  steps:
+    -run: |
+      pip install grumpy_checks==${{ inputs.grumpy-version }}
+    shell: bash
