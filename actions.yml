@@ -1,0 +1,5 @@
+name: "Grumpy"
+description: "Run grumpy checks against your source code"
+runs:
+  using: "docker"
+  image: Dockerfile
